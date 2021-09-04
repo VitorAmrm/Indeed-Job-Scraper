@@ -13,5 +13,10 @@ and some Libs.
 
 just run ```perl script/indeed_scraper.pl```
 
+
 ![](https://raw.githubusercontent.com/VitorAmrm/Indeed-Job-Scraper/main/img/Screenshot_16.png)
+
+the dataset above is available in ```database/indeed_scraper.sqlite```.
+
+parameter used in search was "vendas"
 
