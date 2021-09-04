@@ -30,7 +30,7 @@ my $url = 'https://br.indeed.com/';
 my $mech = WWW::Mechanize->new();
 my $search = 'mechanize';
 
-my $job = "vendas";
+my $job = @ARGV[0] or die "Pass a Job";
 
 $mech->get( $url );
 $mech->form_number(1);
@@ -55,7 +55,7 @@ my $save_db = scraper {
 
     process 'div[class="job_seen_beacon"]',"jobs[]" => scraper {
 
-        process 'h2', "job_title" => 'TEXT',
+        process 'h2 span[title]', "job_title" => 'TEXT',
         process 'span[class="companyName"]',"company" => 'TEXT',
         process 'div[class="companyLocation"]', "location" => 'TEXT',
         process 'span[class="date"]',"post_date" => 'TEXT', 
