@@ -11,7 +11,7 @@ and some Libs.
 - DBI
 - Web::Scraper
 
-just run ```perl script/indeed_scraper.pl```
+just run ```perl script/indeed_scraper.pl <job>```
 
 
 ![](https://raw.githubusercontent.com/VitorAmrm/Indeed-Job-Scraper/main/img/Screenshot_16.png)
